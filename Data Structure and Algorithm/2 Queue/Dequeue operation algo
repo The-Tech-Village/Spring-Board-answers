@@ -1,0 +1,6 @@
+Check whether the queue is empty.
+If the queue is empty, return appropriate message
+If the queue is not empty,
+     Retrieve data at the front of the queue
+     Increment front by 1
+     Return the retrieved element

@@ -1,0 +1,5 @@
+Check whether the stack is empty. 
+If the stack is empty, return appropriate error message
+If the stack is not empty,
+     Retrieve the top most element and return it
+   

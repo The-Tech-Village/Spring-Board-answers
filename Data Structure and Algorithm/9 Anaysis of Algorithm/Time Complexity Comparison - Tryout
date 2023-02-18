@@ -1,0 +1,59 @@
+class Tester {
+	
+	public static double factorial(double n) {
+		double fact=1;
+		for(double i=1;i<=n;i++) {
+			fact=fact*i;
+		}
+		return fact;
+	}
+	
+	public static void comparingComplexities(double n) {
+		System.out.println("Values of different complexities for n = "+n);
+		System.out.println("O(1) = "+1);
+		System.out.println("O(log(log(n))) = "+Math.log(Math.log(n)));
+		System.out.println("O(log(n)) = "+Math.log(n));
+		System.out.println("O(sqrt(n)) = "+Math.sqrt(n));
+		System.out.println("O(n) = "+n);
+		System.out.println("O(nlog(n)) = "+n*Math.log(n));
+		System.out.println("O(n^2) = "+Math.pow(n, 2));
+		System.out.println("O(n^3) = "+Math.pow(n, 3));
+		System.out.println("O(2^n) = "+Math.pow(2,n));
+		System.out.println("O(e^n) = "+Math.exp(n));
+		System.out.println("O(n!) = "+factorial(n));
+	}
+	
+	public static void main(String args[]) {
+		comparingComplexities(10);
+		System.out.println("-------------------------------");
+		comparingComplexities(100);
+		//Try out with different values of n
+	}
+}
+
+Output:
+Values of different complexities for n = 10.0
+O(1) = 1
+O(log(log(n))) = 0.834032445247956
+O(log(n)) = 2.302585092994046
+O(sqrt(n)) = 3.1622776601683795
+O(n) = 10.0
+O(nlog(n)) = 23.02585092994046
+O(n^2) = 100.0
+O(n^3) = 1000.0
+O(2^n) = 1024.0
+O(e^n) = 22026.465794806718
+O(n!) = 3628800.0
+-------------------------------
+Values of different complexities for n = 100.0
+O(1) = 1
+O(log(log(n))) = 1.5271796258079011
+O(log(n)) = 4.605170185988092
+O(sqrt(n)) = 10.0
+O(n) = 100.0
+O(nlog(n)) = 460.51701859880916
+O(n^2) = 10000.0
+O(n^3) = 1000000.0
+O(2^n) = 1.2676506002282294E30
+O(e^n) = 2.6881171418161356E43
+O(n!) = 9.33262154439441E157

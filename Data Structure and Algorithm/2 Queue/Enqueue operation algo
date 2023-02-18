@@ -1,0 +1,6 @@
+Check whether the queue is full. 
+If the queue is full, return false
+If the queue is not full,
+     Increment rear by 1
+     Add the element at rear position in the elements array
+     Return true

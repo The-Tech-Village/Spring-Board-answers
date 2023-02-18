@@ -1,0 +1,61 @@
+class Tester {
+
+	public static void sortArray(int arr[]) {
+		// Implement your logic here
+		int length = arr.length;
+
+		for (int index1 = 0; index1 < (length - 1); index1++) {
+			boolean swapped = false;
+		
+			for (int index2 = 0; index2 < (length - index1 - 1); index2++) {
+				if (arr[index2] > arr[index2 + 1]) {
+					swap(arr, index2, index2 + 1);
+					swapped = true;
+				}
+			}
+			if (swapped == false)
+				break;
+		}
+	}
+
+   public static void swap(int[] numbers, int firstIndex, int secondIndex) {
+		int temp = numbers[firstIndex];
+		numbers[firstIndex] = numbers[secondIndex];
+		numbers[secondIndex] = temp;
+		
+	}
+
+	public static int findMaxSum(int arr[], int m) {
+	
+	    if(m>arr.length){
+	    
+	       return 0;
+	    }
+	
+	    int max=0;
+		for(int i= arr.length-1;i>= arr.length-m;i--){
+		   max = max + arr[i];
+		}
+		return max;
+	}
+
+	public static int findMinSum(int arr[], int m) {
+		if(arr.length < m){
+		   return 0 ;
+		}
+		int min=0;
+		for(int i=0;i<m;i++){
+		   min = min + arr[i];
+		}
+		return min;
+	}
+
+	public static void main(String[] args) {
+		int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
+		sortArray(arr);
+		System.out.println("Maximum Sum for m=4: " + findMaxSum(arr, 4));
+		System.out.println("Minimum Sum for m=3: " + findMinSum(arr, 3));
+	}
+
+}
+

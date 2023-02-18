@@ -1,0 +1,7 @@
+Check whether the stack is full. 
+If the stack is full, return false
+If the stack is not full,
+     Increment top by 1
+     Add the element at top position in the elements array
+     Return true
+   

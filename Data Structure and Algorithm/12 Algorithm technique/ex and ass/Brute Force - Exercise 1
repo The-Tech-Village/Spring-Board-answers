@@ -1,0 +1,19 @@
+class Tester {
+	 
+	public static int calculatePower(int num, int p) {
+	   
+	   if(p==0){
+	      return 1;
+	   }
+	
+	    int ans = num;
+        for(int i=0;i<p-1;i++){
+           ans = ans * num;
+        }
+		return ans;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(calculatePower(2,3));
+	}
+}

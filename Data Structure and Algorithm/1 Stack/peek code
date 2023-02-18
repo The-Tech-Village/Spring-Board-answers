@@ -1,0 +1,6 @@
+int peek() {
+		if (top < 0)
+			return Integer.MIN_VALUE;
+        else
+			return arr[top];
+	}

@@ -1,10 +1,7 @@
-String - Assignment 5
-
-To be honest I have copied :
 class Tester{
-    public static String removeDuplicatesandSpaces(String st){
-        String s=st.replaceAll("\\s", "");//white space removed
-        String str = new String();
+    public static String removeDuplicatesandSpaces(String str){
+         String s=str.replaceAll("\\s", "");
+        String st = new String();
         int len = s.length();
          
         // loop to traverse the string and
@@ -17,19 +14,20 @@ class Tester{
              
             // if c is present in str, it returns
             // the index of c, else it returns -1
-            if (str.indexOf(c) < 0)
+            if (st.indexOf(c) < 0)
             {
                 // adding c to str if -1 is returned
-                str += c;
+                st += c;
             }
         }
          
-        return str;
+        return st;
 	}
 	
 	public static void main(String args[]){
 	    String str = "object oriented programming";
-	    
 	    System.out.println(removeDuplicatesandSpaces(str));
 	}
 }
+
+

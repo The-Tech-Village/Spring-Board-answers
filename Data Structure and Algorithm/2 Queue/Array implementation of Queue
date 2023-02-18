@@ -1,0 +1,10 @@
+class Queue {
+	private int front, rear, maxSize;
+	private String arr[];
+	Queue(int maxSize) {
+		this.front = 0;
+		this.rear = -1;
+		this.maxSize = maxSize;
+		this.arr = new String[this.maxSize];
+	}
+}

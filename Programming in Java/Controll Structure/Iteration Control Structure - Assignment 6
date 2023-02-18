@@ -1,0 +1,32 @@
+Iteration Control Structure - Assignment 6
+
+Implement a program to check whether a given number is a lucky number.
+
+A lucky number is a number whose sum of squares of every even-positioned digit (starting from the second position) is a multiple of 9.
+
+E.g. - 1623 = 62+32 = 45 is a multiple of 9 and hence is a lucky number.
+
+class Tester {
+	public static void main(String[] args) {
+		int num =1623;
+		
+		int rem =0;
+		int temp=num;
+		int count =0;
+		double sum=0;
+		while(temp !=0){
+		   rem = temp%10;
+		   if(count % 2 == 0){
+		      sum = sum + Math.pow(rem,2);
+		   }
+		   temp = temp/10;
+		   count++;
+		}
+		
+		if(sum % 9 ==0 ){
+		   System.out.println("The number "+num+" is a lucky number");
+		}else{
+		   System.out.println("The number is not lucky number");
+		}
+	}
+}

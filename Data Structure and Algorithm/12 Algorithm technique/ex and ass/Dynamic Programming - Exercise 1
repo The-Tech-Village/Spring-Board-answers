@@ -1,0 +1,34 @@
+
+/*
+Explanation:
+
+We create an array val to store the maximum price obtainable for each length of the rod (0 to n).
+The value of val[0] is 0, since there is no price for a rod of length 0.
+For each length of the rod from 1 to n, we calculate the maximum price obtainable by cutting the rod into smaller pieces and summing the price of each piece with the price of the remaining rod (calculated using val[i - j - 1]).
+We store the maximum price in val[i] for each length i of the rod.
+Finally, we return the maximum price obtainable for a rod of length n.
+
+*/
+class Tester {
+	
+	public static int cutRod(int[] price, int n) {
+		 int[] val = new int[n + 1];
+    val[0] = 0;
+ 
+    for (int i = 1; i <= n; i++) {
+        int max_val = Integer.MIN_VALUE;
+        for (int j = 0; j < i; j++) {
+            max_val = Math.max(max_val, price[j] + val[i - j - 1]);
+        }
+        val[i] = max_val;
+    }
+ 
+    return val[n];
+	}
+
+	public static void main(String[] args) {
+		int price [] = { 1, 5, 8, 9, 10, 17, 17, 20 };
+		int n = 4;
+		System.out.println("Maximum price: " + cutRod(price, n));
+	}
+}

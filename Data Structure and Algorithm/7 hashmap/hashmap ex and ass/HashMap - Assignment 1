@@ -1,0 +1,38 @@
+import java.util.*;
+
+class Tester {
+    
+	public static List<String> sortSales(Map<String, Integer> sales) {
+    // Create a list of sales entries from the sales map
+    List<Map.Entry<String, Integer>> salesList = new ArrayList<>(sales.entrySet());
+
+    // Sort the sales entries based on their values in descending order
+    Collections.sort(salesList, (o1, o2) -> o2.getValue().compareTo(o1.getValue()));
+
+    // Create a list of employee names from the sorted sales entries
+    List<String> employees = new ArrayList<>();
+    for (Map.Entry<String, Integer> entry : salesList) {
+        employees.add(entry.getKey());
+    }
+
+    // Return the list of employee names
+    return employees;
+	}
+
+	public static void main(String args[]) {
+	    Map<String, Integer> sales = new HashMap<String, Integer>();
+		sales.put("Mathew", 50);
+		sales.put("Lisa", 76);
+		sales.put("Courtney", 45);
+		sales.put("David", 49);
+		sales.put("Paul", 49);
+		
+		List<String> employees = sortSales(sales);
+		
+		System.out.println("Employees in the decreasing order of their sales\n=====================================");
+		for (String employeeName : employees) {
+			System.out.println(employeeName);
+		}
+	}
+
+}

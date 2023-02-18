@@ -1,0 +1,10 @@
+This technique involves breaking the problem into smaller parts, solving these smaller problems and then combining them to form the solution of the original problem.
+
+It consists of the following steps:
+
+Divide the original problem into sub-problems
+
+Conquer or solve the sub-problems individually
+
+Combine the solutions to get the solution for the original problem
+
